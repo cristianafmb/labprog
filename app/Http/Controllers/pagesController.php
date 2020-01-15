@@ -53,9 +53,10 @@ class pagesController extends BaseController{
         $data = request('data');
         $preço = request('preço');
         $local = request('local');
-        $em_stock = request('em_stock');
 
-        $info=array('id'=>$id,"nome"=>$nome,"quantidade"=>$quantidade,"data"=>$data,"preço"=>$preço, "local"=>$local,"em_stock"=>$em_stock);
+        $stock = DB::table('inventario')->where('id', "=", $id)->value('em_stock');
+        $stock = $stock + $quantidade;
+        $info=array('id'=>$id,"nome"=>$nome,"quantidade"=>$quantidade,"data"=>$data,"preço"=>$preço, "local"=>$local, "em_stock"=>$stock);
         DB::table('inventario')->insert($info);
         echo "<h1> Successfully Added!! <h1>"; 
         $itens = \DB::select('SELECT * FROM inventario');
@@ -83,8 +84,6 @@ class pagesController extends BaseController{
         }else if($op=6){
             $op='em_stock';
         }
-		
-		
 		
          DB::table('inventario')->where('id', "=", $id)->update([$op =>$tochange]);
          echo "<h1> Successfully Modified!! <h1>"; 

@@ -43,12 +43,7 @@
                     </form>
                     </div>
                 </td>
-                <td>Stock
-                    <div class="container">
-                        <input type="text"class="input"  name="em_stock">
-                    </form>
-                    </div>
-                </td>
+                
                 <td> <input type = 'submit' style="background-color:green; color:white" value = "add"></button> </td>
             </tr>
         </table>

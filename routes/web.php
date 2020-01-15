@@ -23,3 +23,5 @@ Route::post('/delete', 'pagesController@remove');
 
 Route::get('/update', 'pagesController@update');
 Route::post('/update', 'pagesController@updateby');
+
+Route::post('/github', 'pagesController@welcome');

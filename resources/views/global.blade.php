@@ -70,7 +70,7 @@
                     <a href='/add'>Add - Inventory</a>
                     <a href='/delete'>Delete by ID - Inventory</a>
                     <a href='/update'>Update - Inventory</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/cristianafmb/laboratorio.git">GitHub</a>
                 </div> 
         
     </body>
