@@ -23,6 +23,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    public $timestamps = false;
 
     /**
      * Where to redirect users after registration.
@@ -49,6 +50,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],

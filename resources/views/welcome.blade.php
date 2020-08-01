@@ -84,13 +84,6 @@
                     <a href="/welcome">Inventory</a>
                 </div>
 
-                <div class="links">
-                    <a href='/show'>SHOW</a>
-                    <a href='/add'>ADD</a>
-                    <a href='/delete'>DELETE BY ID</a>
-                    <a href='/update'>UPDATE</a>
-                    <a href="https://github.com/cristianafmb/laboratorio.git">GitHub</a>
-                </div>
             </div>
         </div>
     </body>

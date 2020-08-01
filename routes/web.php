@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'pagesController@home');
 
+/*
+Route::get('/', 'pagesController@home');
 Route::get('/add', 'pagesController@add');
 Route::post('/add', 'pagesController@insert');
 
@@ -25,3 +26,18 @@ Route::get('/update', 'pagesController@update');
 Route::post('/update', 'pagesController@updateby');
 
 Route::post('/github', 'pagesController@welcome');
+
+Route::get('/home', 'pagesController@index')->name('home');
+**/
+
+Route::group(['middleware' => 'web'], function () {
+
+    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
+    #adminlte_routes
+
+    Auth::routes();
+
+    //Route::get('/home', 'pagesController@index');
+    }
+);
+

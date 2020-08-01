@@ -13,7 +13,7 @@ class CreateInventoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('inventario', function (Blueprint $table) {
+        Schema::create('inventory', function (Blueprint $table) {
             $table->bigIncrements('id')->notnullable();
             $table->string('nome')->notnullable();
             $table->string('quantidade')->nullable();
@@ -24,6 +24,7 @@ class CreateInventoryTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        
     }
     
     /**

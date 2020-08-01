@@ -17,6 +17,10 @@ use Illuminate\Routing\Controller as BaseController;
 
 class pagesController extends BaseController{
     
+    public function start(){
+        echo('here');
+    }
+
     public function home(){
         return view('welcome');
     }
@@ -98,4 +102,15 @@ class pagesController extends BaseController{
         return view('github');
     }
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+   
+    public function index()
+    {
+        return view('home');
+    }
+    
 }
